@@ -371,6 +371,7 @@ class UIWindow(pygame_gui.elements.UIWindow):
         return float(self.value_s)
 
     def cop(self):
+        """
         shutil.copytree(f"{self.mount}/0/bin/image/root", f"{self.SystemSetupRoot["/"]}", dirs_exist_ok=True)
         self.value_s += 25
         time.sleep(1)
@@ -383,6 +384,8 @@ class UIWindow(pygame_gui.elements.UIWindow):
         shutil.copytree(f"{self.mount}/0/bin/image/libs", f"{self.SystemSetupRoot["/lib"]}", dirs_exist_ok=True)
         self.value_s += 20
         time.sleep(1)
+        """
         shutil.copyfile(f"{self.mount}/0/bin/image/bootloader.py", f"{self.SystemSetupRoot["GPT"]}/bootloader.py")
-        self.value_s += 5
+        #self.value_s += 5
+        self.value_s = 100
         time.sleep(1)
